@@ -59,11 +59,86 @@ class LinkedList {
     }
 }
 
+///////////////////////////////////////////////////functions///////////////////////////////////////////
+
+function display (list){
+    console.log(list);
+};
+
+function size (list) {
+    console.log(list.length);
+    return list.length;
+};
+
+function isEmpty(list){
+
+    if(list.length > 0){
+        console.log(false);
+    } else {
+        console.log(true);
+    };
+};
+
+
+function findPrevious(list, index) {
+
+    console.log(list.get(index-1));
+};
+
+function findLast (list) {
+
+    console.log(list.get(size(list)-1));
+
+};
+
+
+
+///////////////////////////////////////////////////algorithms///////////////////////////////////////////////
+
+//Find middle element
+
+function middle(list){
+    let newIndex = Math.ceil(size(list)/2);
+    console.log(newIndex);
+    return newIndex;
+};
+
+
+//find third from the end
+
+function findThirdFromLast(list){
+
+    console.log(list.get(size(list)-3));
+
+};
+
+//reverse linked list
+
+function reverse(list){
+
+    for(let i=0; i<list.length; i++){
+        
+    }
+
+}
+
+
+
+
+
+
 let myList = new LinkedList();
 
 myList.insert(0, 5);
 myList.insert(1, 4);
+myList.insert(2, 9);
+myList.insert(3, 7);
+myList.insert(4, 10);
 
-console.log(myList);
+
+findThirdFromLast(myList);
+
+
+
 
 </script>
