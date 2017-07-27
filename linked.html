@@ -59,26 +59,62 @@ class LinkedList {
     }
 }
 
+
+
+let myList = new LinkedList();
+
+// myList.insert(0, 5);
+// myList.insert(1, 4);
+// myList.insert(2, 9);
+// myList.insert(3, 7);
+// myList.insert(4, 10);
+
+
+
+
 ///////////////////////////////////////////////////functions///////////////////////////////////////////
 
 function display (list){
-    console.log(list);
+    let head = list.head;
+    let current = head;
+    if (current === null) return;
+   
+   while(current){
+      current = current.next
+      console.log(current.value)
+   }
+   
 };
+// display(myList);
+
 
 function size (list) {
-    console.log(list.length);
-    return list.length;
+    let count = 0;
+    let current = list.head;
+
+    if (current === null) return; 
+    while (current) {
+        current = current.next;
+        count++;
+
+    }
+
+    console.log(`${count} is the current count for list`);
+
 };
+
+// size(myList)
 
 function isEmpty(list){
-
-    if(list.length > 0){
-        console.log(false);
-    } else {
+    let current = list.head;
+    
+    if (!current ){
         console.log(true);
+    } else {
+        console.log(false);
     };
 };
-
+// isEmpty(myList)
 
 function findPrevious(list, index) {
 
@@ -127,16 +163,7 @@ function reverse(list){
 
 
 
-let myList = new LinkedList();
 
-myList.insert(0, 5);
-myList.insert(1, 4);
-myList.insert(2, 9);
-myList.insert(3, 7);
-myList.insert(4, 10);
-
-
-findThirdFromLast(myList);
 
 
 
